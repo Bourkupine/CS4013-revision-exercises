@@ -110,9 +110,7 @@ public class Exercise7_9 {
         }
         //diagonal checker
         if (board[2][2] != ' ') {
-            if (board[0][0] == board[1][1] && board[0][0] == board[2][2] || board[0][2] == board[1][1] && board[0][2] == board[2][0]) {
-                return false;
-            }
+            return (board[0][0] != board[1][1] || board[0][0] != board[2][2]) && (board[0][2] != board[1][1] || board[0][2] != board[2][0]);
         }
         return true; //returns true if game is still ongoing, i.e. no one has won yet
 
